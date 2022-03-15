@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import LikedTotal from './LikedTotal'
 
 const Likes = () => {
   let [totalLikes, setAmount] = useState(0)
@@ -19,9 +20,7 @@ const Likes = () => {
 
   return (
     <div className="counter">
-      <div className="count">
-        <p>{totalLikes}</p>
-      </div>
+      <LikedTotal totalLikes={totalLikes} />
       <input className="btn" type="submit" value="+" onClick={addLikes} />
       <input className="btn" type="submit" value="-" onClick={removeLikes} />
     </div>
